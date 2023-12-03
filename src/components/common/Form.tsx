@@ -41,7 +41,7 @@ export const Form = () => {
 		<div className="contenedor">
 			{alerta && <Alert message="Todos los campos son obligatorios" />}
 			<div>
-			<img src="./icono.svg" alt="icono de app del clima, nubes y sol" />
+			<img width="200" height="200" src="./icono.svg" alt="icono de app del clima, nubes y sol" />
 			</div>
 			<form aria-label='Buscar el clima por ciudad'  onSubmit={handleSubmit}>
 				<div className="campo">

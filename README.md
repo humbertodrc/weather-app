@@ -81,6 +81,8 @@ https://openweathermap.org/
 |   |-- data
           |-- climate
           |-- forecast
+|   |-- hooks
+          |-- useSEO
 |   |-- features
           |-- Climate
           |-- Forecast

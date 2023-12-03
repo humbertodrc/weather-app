@@ -2,8 +2,15 @@ import { Header } from "./components/common/Header";
 import { Climate } from "./features/Climate/Climate";
 import { Forecast } from "./features/Forecast/Forecast";
 import { Search } from "./features/Search/Search";
+import { useSEO } from './hooks/useSEO';
 
 function App() {
+
+	useSEO({
+		title: 'App del Clima',
+		description: 'App del clima, con React, Redux Toolkit, TypeScript, Styled Components y OpenWeatherMap API',
+	})
+
 	return (
 		<>
 			<Header>
