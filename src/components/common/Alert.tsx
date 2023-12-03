@@ -1,5 +1,9 @@
-export const Alert = () => {
-  return (
-    <div>Alert</div>
-  )
+import {FC} from "react";
+
+interface AlertProps {
+	message: string;
 }
+
+export const Alert: FC<AlertProps> = ({message}) => {
+	return <p>{message}</p>;
+};
