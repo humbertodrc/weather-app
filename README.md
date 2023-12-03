@@ -154,7 +154,13 @@ Puede obtener un mejor visualización del coverage de los test ejecutando el com
 
 ## Demo
 
-Puedes ver el demo del proyecto en el siguiente enlace: https://weather-app-humbertodrc.vercel.app/
+Puedes ver el demo del proyecto en el siguiente enlace: https://weather-app-humbertodrc.netlify.app/
+
+## Screenshots
+
+![App Screenshot](https://github.com/humbertodrc/weather-app/assets/63797901/c9583bb1-009a-4a4b-9e89-2cdbdb518739)
+
+
 
 ## Authors
 
