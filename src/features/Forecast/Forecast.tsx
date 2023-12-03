@@ -22,6 +22,7 @@ export const Forecast = () => {
 
 				const res = await current;
 				dispatch(fetchingForecast(res));
+				setLoading(false);
 			}
 		} catch (error) {
 			console.error("Error al obtener la ubicación:", error);
@@ -35,11 +36,11 @@ export const Forecast = () => {
 	}, []);
 
 	return (
-		<section>
+		<div>
 			<h2>Pronostico por los proximos 5 dias cada 3 horas</h2>
 			<div className="card-container">
 				{loading ? <p>Obteniendo ubicación...</p> : <ForecastCard />}
 			</div>
-		</section>
+		</div>
 	);
 };

@@ -44,26 +44,4 @@ export const getForecast = async (datos: SearchType): Promise<ForecastType[]> =>
 
 };
 
-// Obtner el clima de la ciudad donde se encuentra el usuario
-// export const getCurrentClima = async ({lat, lon}:{lat:number, lon:number}): Promise<ResultadoType> => {
-
-// 	try {
-// 		const appId = import.meta.env.VITE_CLIMA_API_KEY;
-// 		const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}&units=metric`;
-// 		const respuesta = await fetch(url);
-// 		if (!respuesta.ok) {
-// 			throw new Error("No se pudo obtener el clima");
-// 		}
-// 		const resultado = await respuesta.json();
-// 		const { name, main } = resultado;
-
-// 		return {
-// 			name,
-// 			main
-// 		};
-
-// 	} catch (error) {
-// 		throw new Error("Error al consultar el clima");
-// 	}
-// };
 

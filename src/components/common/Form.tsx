@@ -43,7 +43,7 @@ export const Form = () => {
 			<div>
 			<img src="./icono.svg" alt="icono de app del clima, nubes y sol" />
 			</div>
-			<form onSubmit={handleSubmit}>
+			<form aria-label='Buscar el clima por ciudad'  onSubmit={handleSubmit}>
 				<div className="campo">
 					<Input
 						htmlFor="ciudad"
