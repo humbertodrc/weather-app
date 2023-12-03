@@ -3,7 +3,7 @@ import { Select } from './Select'
 
 export const Form = () => {
   return (
-    <section>
+    <div className='contenedor'>
       <div>
         <img src="" alt="" />
       </div>
@@ -23,6 +23,6 @@ export const Form = () => {
 				</div>
 				<input type="submit" value="Consultar Clima" />
 			</form>
-    </section>
+    </div>
   )
 }

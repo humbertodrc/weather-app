@@ -9,9 +9,15 @@ function App() {
 			<Header>
 				<h1>App del Clima</h1>
 			</Header>
-			<Search />
-			<Climate />
-			<Forecast />
+			<main>
+				<section className="dos-columnas">
+					<Search />
+					<Climate />
+				</section>
+				<section>
+					<Forecast />
+				</section>
+			</main>
 		</>
 	);
 }
