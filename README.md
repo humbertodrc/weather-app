@@ -169,7 +169,7 @@ Puedes ver el demo del proyecto en el siguiente enlace: https://weather-app-humb
 
 ## Screenshots
 
-![App Screenshot](https://github.com/humbertodrc/weather-app/assets/63797901/c9583bb1-009a-4a4b-9e89-2cdbdb518739)
+![App Screenshot](https://github.com/humbertodrc/weather-app/assets/63797901/a6d9201c-19d1-4817-8576-81cb4f40a73c)
 
 
 
