@@ -1,27 +1,31 @@
-import { climate } from '../data/climate'
+// import { climate } from '../data/climate'
+import { useAppSelector } from '../store'
 
 export const WatherCard = () => {
 
+  const climate = useAppSelector(state => state.climate)
+  const {name, main} = climate
+
   return (
     <div>
-      <h2>El clima de {climate.name} es:</h2>
+      <h2>El clima de {name} es:</h2>
       <p>
-        Temperatura actual: {climate.main?.temp}°C
+        Temperatura actual: {main?.temp}°C
       </p>
       <p>
-        Temperatura máxima: {climate.main?.temp_max}°C
+        Temperatura máxima: {main?.temp_max}°C
       </p>
       <p>
-        Temperatura mínima: {climate.main?.temp_min}°C
+        Temperatura mínima: {main?.temp_min}°C
       </p>
       <p>
-        Humedad: {climate.main?.humidity}%
+        Humedad: {main?.humidity}%
       </p>
       <p>
-        Presión: {climate.main?.pressure} hPa
+        Presión: {main?.pressure} hPa
       </p>
       <p>
-        Sensación térmica: {climate.main?.feels_like}°C
+        Sensación térmica: {main?.feels_like}°C
       </p>
     </div>
   )

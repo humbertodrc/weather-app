@@ -1,5 +1,3 @@
-//TODO: Eliminar los datos que no se necesitan
-
 export type ClimateType = {
   main:       Main;
   name:       string;

@@ -41,7 +41,7 @@ export const Form = () => {
 		<div className="contenedor">
 			{alerta && <Alert message="Todos los campos son obligatorios" />}
 			<div>
-				<img src="" alt="" />
+			<img src="./icono.svg" alt="icono de app del clima, nubes y sol" />
 			</div>
 			<form onSubmit={handleSubmit}>
 				<div className="campo">

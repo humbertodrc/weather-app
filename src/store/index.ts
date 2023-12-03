@@ -1,17 +1,15 @@
-// store.ts
-import { configureStore } from '@reduxjs/toolkit';
-import createSagaMiddleware from '@redux-saga/core';
+import createSagaMiddleware from "@redux-saga/core";
+import { configureStore } from "@reduxjs/toolkit";
 
-import rootSaga from './saga';
-import { climaSlice } from './slice';
-import { useDispatch, TypedUseSelectorHook, useSelector } from "react-redux";
-
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import rootSaga from "./saga";
+import { climaSlice } from "./slice";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: climaSlice.reducer,
-  middleware : [sagaMiddleware]
+	reducer: climaSlice.reducer,
+	middleware: [sagaMiddleware],
 });
 
 sagaMiddleware.run(rootSaga);
