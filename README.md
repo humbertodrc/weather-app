@@ -1,3 +1,14 @@
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue.svg)](https://www.typescriptlang.org/)
+[![Redux](https://img.shields.io/badge/Redux-8.1-purple.svg)](https://redux.js.org/)
+[![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-3-blueviolet.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Vite](https://img.shields.io/badge/Vite-2.6-blueviolet.svg)](https://vitejs.dev/)
+[![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-2.5-blueviolet.svg)](https://openweathermap.org/)
+[![OpenCage Geocoding API](https://img.shields.io/badge/OpenCage%20Geocoding%20API-1.0-blueviolet.svg)](https://opencagedata.com/)
+
+
+
 # App del Clima
 
 Este proyecto esta realizado con ReactJS, la API de OpenWeatherMap y la API de OpenCage Geocoding AP. Utiliza TypeScript, Redux, Redux Toolkit, Redux Saga. Para los estilos se utilizo CSS. La aplicación permite obtener el clima de una ciudad, para ello se debe ingresar el nombre de la ciudad en el Formulario y presionar el botón de "Consultar Clima". La aplicación tambien muestra el clima actual de la ciudad donde se encuentra el usuario y el pronostico de los proximos 5 dias cada 30 minutos de la ciudad consultada. Se debe permitir la ubicación del usuario para poder obtener el clima actual de la ciudad donde se encuentra. Para esto debes aceptar el permiso de ubicación que te solicita el navegador.
