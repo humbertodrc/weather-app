@@ -1,30 +1,161 @@
-# React + TypeScript + Vite
+# App del Clima
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto esta realizado con ReactJS, la API de OpenWeatherMap y la API de OpenCage Geocoding AP. Utiliza TypeScript, Redux, Redux Toolkit, Redux Saga. Para los estilos se utilizo CSS. La aplicación permite obtener el clima de una ciudad, para ello se debe ingresar el nombre de la ciudad en el Formulario y presionar el botón de "Consultar Clima". La aplicación tambien muestra el clima actual de la ciudad donde se encuentra el usuario y el pronostico de los proximos 5 dias cada 30 minutos de la ciudad consultada. Se debe permitir la ubicación del usuario para poder obtener el clima actual de la ciudad donde se encuentra. Para esto debes aceptar el permiso de ubicación que te solicita el navegador.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Consultar el clima de una ciudad.
+- Consultar el clima actual de la ciudad donde se encuentra el usuario.
+- Consultar el pronostico de los proximos 5 dias cada 30 minutos de la ciudad consultada.
 
-## Expanding the ESLint configuration
+## Environment Variables
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Para correr este proyecto, debes agregar las siguientes variables de entorno a tu archivo .env, puedes utilizar el archivo .env.example como ejemplo.	
 
-- Configure the top-level `parserOptions` property like this:
+`VITE_CLIMA_API_KEY`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+`VITE_LOCATION_API_KEY`
+
+Para conseguir estas claves debes registrarte en las siguientes paginas:
+https://opencagedata.com/
+https://openweathermap.org/
+
+## API Reference
+
+#### Get Clima
+
+```http
+  GET https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${api_key}&units=metric
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+| Parameter       | Type     | Description                |
+| :--------       | :------- | :------------------------- |
+| `CLIMA_API_KEY` | `string` | **Required**. Your API key |
+| `ciudad`        | `string` | **Required**. Ciudad       |
+| `pais`          | `string` | **Required**. Pais         |
+
+#### Get Location
+
+```http
+  GET https://api.opencagedata.com/geocode/v1/json?key=${api_key}&q=${lat}+${lon}&pretty=1
+```
+
+| Parameter               | Type     | Description                       |
+| :---------------------- | :------- | :-------------------------------- |
+| `LOCATION_API_KEY`      | `string` | **Required**. Your API key        |
+| `lat`                   | `string` | **Required**. Latitud             |
+| `lon`                   | `string` | **Required**. Longitud            |    
+
+
+## Estrutura de carpetas
+
+```
+/app-weather
+|-- coverage
+|-- public
+|-- src
+|   |-- assets
+|   |-- components
+          |-- common
+                |-- Alert
+                |-- Form
+                |-- Header
+                |-- Icons
+                |-- Input
+                |-- Select
+          |-- ForescastCard
+          |-- WatherCard
+|   |-- constants
+            |-- options
+|   |-- data
+          |-- climate
+          |-- forecast
+|   |-- features
+          |-- Climate
+          |-- Forecast
+          |-- Search
+|   |-- services
+          |-- getCity
+          |-- getClimate
+          |-- getLocation
+|   |-- store
+          |-- saga
+                |-- index
+          |-- slice
+                |-- index
+          |-- index
+|   |-- test
+          |--App.test
+|   |-- types
+          |-- climate.types
+          |-- forecast.types
+          |-- location.types
+          |-- search.types
+|   |-- utils
+          |-- getDate
+|-- example.env
+|-- eslintrc.js
+|-- .gitignore
+|-- index.html
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- tsconfig.json
+|-- tsconfig.test.json
+|-- vite.config.ts
+```
+
+
+## Ambiente de desarrollo
+
+Clone el proyecto
+
+```bash
+  git clone https://github.com/humbertodrc/weather-app.git
+```
+
+Para correr este proyecto, debes ejecutar los siguientes comandos en la carpeta raiz del proyecto:
+
+```bash
+  npm install
+  npm run dev
+```
+
+## Ambiente de producción
+
+Para correr este proyecto, debes ejecutar los siguientes comandos en la carpeta raiz del proyecto:
+
+```bash
+  npm install
+  npm run build
+```
+
+Hay que tener en cuenta que para correr el proyecto en producción se debe agregar las variables de entorno en el archivo .env
+
+## Running Tests
+
+Para correr los test, debes ejecutar los siguientes comandos en la carpeta raiz del proyecto:
+
+```bash
+  npm run test
+```
+
+Para obtener el coverage de los test, debes ejecutar los siguientes comandos en la carpeta raiz del proyecto:
+
+```bash
+  npm run coverage
+```
+
+Puede obtener un mejor visualización del coverage de los test ejecutando el comando:
+
+```bash
+  npm run test:ui
+```
+
+## Demo
+
+Puedes ver el demo del proyecto en el siguiente enlace: https://weather-app-humbertodrc.vercel.app/
+
+## Authors
+
+- [@humbertodrc](https://github.com/humbertodrc)
