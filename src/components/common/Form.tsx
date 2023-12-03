@@ -1,15 +1,19 @@
-import {useState} from "react";
-import {BusquedaType} from "../../types/search.types";
-import {Input} from "./Input";
-import {Select} from "./Select";
-import {Alert} from "./Alert";
+import { useState } from "react";
+import { Alert } from "./Alert";
+import { Input } from "./Input";
+import { Select } from "./Select";
+import { useDispatch } from 'react-redux';
+import { SearchType } from '../../types/search.types';
+import { fetchingClimate, fetchingForecast } from '../../store/slice';
 
 export const Form = () => {
-	const [busqueda, setBusqueda] = useState<BusquedaType>({
+	const [busqueda, setBusqueda] = useState<SearchType>({
 		ciudad: "",
 		pais: "",
 	});
 	const [alerta, setAlerta] = useState(false);
+	
+	const dispatch = useDispatch();
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -29,7 +33,8 @@ export const Form = () => {
 		}
 
 		setAlerta(false);
-		console.log(busqueda);
+		dispatch(fetchingClimate(busqueda))
+		dispatch(fetchingForecast(busqueda))
 	};
 
 	return (

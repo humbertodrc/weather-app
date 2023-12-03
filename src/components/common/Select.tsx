@@ -1,5 +1,5 @@
-import {FC} from "react";
-import {OPTIONSCOUNTRY} from "../../constants/options";
+import { FC } from "react";
+import { OPTIONSCOUNTRY } from "../../constants/options";
 
 interface SelectProps {
 	htmlFor: string;

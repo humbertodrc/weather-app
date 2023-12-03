@@ -1,7 +1,7 @@
-import {Header} from "./components/common/Header";
-import {Climate} from "./features/Climate/Climate";
-import {Forecast} from "./features/Forecast/Forecast";
-import {Search} from "./features/Search/Search";
+import { Header } from "./components/common/Header";
+import { Climate } from "./features/Climate/Climate";
+import { Forecast } from "./features/Forecast/Forecast";
+import { Search } from "./features/Search/Search";
 
 function App() {
 	return (
