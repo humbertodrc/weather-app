@@ -13,6 +13,11 @@
 
 Este proyecto esta realizado con ReactJS, la API de OpenWeatherMap y la API de OpenCage Geocoding AP. Utiliza TypeScript, Redux, Redux Toolkit, Redux Saga. Para los estilos se utilizo CSS. La aplicación permite obtener el clima de una ciudad, para ello se debe ingresar el nombre de la ciudad en el Formulario y presionar el botón de "Consultar Clima". La aplicación tambien muestra el clima actual de la ciudad donde se encuentra el usuario y el pronostico de los proximos 5 dias cada 30 minutos de la ciudad consultada. Se debe permitir la ubicación del usuario para poder obtener el clima actual de la ciudad donde se encuentra. Para esto debes aceptar el permiso de ubicación que te solicita el navegador.
 
+
+> [!IMPORTANT]
+> El usuario debe aceptar el permiso de ubicación que solicita el navegador para poder obtener el clima actual de la ciudad donde se encuentra.
+
+
 ## Features
 
 - Consultar el clima de una ciudad.
