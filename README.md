@@ -27,6 +27,9 @@ Para correr este proyecto, debes agregar las siguientes variables de entorno a t
 
 `VITE_LOCATION_API_KEY`
 
+VITE_CLIMA_API_KEY=5e04f361bb111f953e11b1ab3b85b27b
+VITE_LOCATION_API_KEY=0eadd6117fa845af9bf6d819f9b5ff43
+
 Para conseguir estas claves debes registrarte en las siguientes paginas:
 https://opencagedata.com/
 https://openweathermap.org/
