@@ -15,9 +15,9 @@ export const ForecastCard = () => {
 					{new Date(item.dt * 1000).toLocaleString()}
 					<img width="120" height="120" src={`./${item.weather[0].main}.svg`} alt={item.weather[0].description} />
 					{/* Temperatura minima */}
-					<p>{item.main.temp_min}°C</p>
+					<p>Min: {item.main.temp_min}°C</p>
 					{/* Temperatura Maxima */}
-					<p>{item.main.temp_max}°C</p>
+					<p>Max: {item.main.temp_max}°C</p>
 				</div>
 			))}
 		</>
